@@ -28,12 +28,15 @@ int main(){
 		printf("O que quer decodificar: ");
 		for(j=0;j<sizeof(char);j++){
 			scanf("%d, ",&vet[j]);
+			if(vet[j]==10)
+			break;
 			getchar();
 		}
 		for(n;n<sizeof(char);n++)
-		pd=((char*)&vet[n])-sizeof(vet)/sizeof(int);
+		pd=((char*)&vet[n]);
 		for(;pd<(char*)&vet+sizeof(vet);pd++){
-			
+			if(*pd==0)
+			break;
 			printf("%c",*pd);
 		}
 		printf("%d",vet[1]);
