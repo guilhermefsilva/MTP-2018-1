@@ -1,7 +1,8 @@
-//Matrícula: 11811EEL039
+//MatrÃ­cula: 11811EEL039
 //Nome: Guilherme Felipe da Silva
 #include <stdio.h>
 int main(){
+	long int nd,r;
 	int x,j=0,i=0,jb;
 	char num[256];
 	printf("Escolha uma opcao:\n1. Binario para Decimal\n2- Binario para Hexadecimal\n3- Hexadecimal para Decimal\n4. Hexadecimal para Binario\n5. Decimal para Binario\n6. Decimal para Hexadecimal\n7. Octal para Decimal\n8. Decimal para Octal\n");
@@ -48,10 +49,17 @@ int main(){
 		}
 	}
 		else if(x==5){
-		printf("Digite o numero decimal: ");
-		scanf("%d",&j);
-		itoa (j,num,2);
-		printf("O numero binario e: %s",num);
+		int nb[100],n=1,j;
+		printf("Digite um numero decimal: ");
+		scanf("%ld",&nd);
+		r = nd;
+		while(r!=0){
+			nb[n++]= r % 2;
+			r = r / 2;
+		}
+		printf("O numero binario e: ");
+		for(j = n -1 ;j> 0;j--)
+			printf("%d",nb[j]);
 	}
 		else if(x==6){
 		printf("Digite o numero decimal: ");
