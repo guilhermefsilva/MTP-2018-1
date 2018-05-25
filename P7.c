@@ -13,6 +13,7 @@ int A(int m, int n) {
 		return A(m - 1, A(m, n - 1));
 }
 int main() {
+	
 	int m,n;
 	
 	printf("Digite o valor para m: ");
