@@ -1,4 +1,4 @@
-//Matrícula: 11811EEL039
+//MatrÃ­cula: 11811EEL039
 //Nome: Guilherme Felipe da Silva
 #include <stdio.h>
 int main(){
@@ -9,7 +9,7 @@ int main(){
 	scanf("%d",&x);
 		if(x==1){
 		printf("Digite o numero binario: ");
-		scanf("%s",&num);
+		scanf("%s",num);
 		for(i; num[i]!='\0'; i++){
 			j=j*2+(num[i]-'0');
 		}
