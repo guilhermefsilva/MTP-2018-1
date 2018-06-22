@@ -2,7 +2,7 @@
 //Nome: Guilherme Felipe da Silva
 #include <stdio.h>
 int main(){
-	long int nd,r;
+	int nd,r;
 	int x,j=0,i=0,jb;
 	char num[256];
 	printf("Escolha uma opcao:\n1. Binario para Decimal\n2- Binario para Hexadecimal\n3- Hexadecimal para Decimal\n4. Hexadecimal para Binario\n5. Decimal para Binario\n6. Decimal para Hexadecimal\n7. Octal para Decimal\n8. Decimal para Octal\n");
@@ -51,7 +51,7 @@ int main(){
 		else if(x==5){
 		int nb[100],n=1,j;
 		printf("Digite um numero decimal: ");
-		scanf("%ld",&nd);
+		scanf("%d",&nd);
 		r = nd;
 		while(r!=0){
 			nb[n++]= r % 2;
@@ -76,7 +76,7 @@ int main(){
 		else if(x==8){
 		int no[100],i=1,j;
 	printf("Digite um numero decimal: ");
-	scanf("%ld",&nd);
+	scanf("%d",&nd);
 	r = nd;
 	while(r!=0){
 		no[i++]= r % 8;
