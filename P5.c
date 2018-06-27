@@ -1,5 +1,5 @@
 //Nome: Guilherme Felipe da Silva
-//Matrícula: 11811EEL039
+//MatrÃ­cula: 11811EEL039
 
 #include<stdio.h>
 int main(){
@@ -32,6 +32,6 @@ int main(){
                 break;
 
 		}
-        printf("%s",&vet);
+        printf("%s",vet);
 	}
 }
