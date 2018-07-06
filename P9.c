@@ -18,15 +18,15 @@ struct Produto{
 void cadastrar(struct Produto Quant[], int i)
 {
 	printf("Nome: ");
-	scanf("%s", Quant[i].nome);
+	scanf("%s", Quant[i].nome);getchar();
 	printf("Preco: ");
-	scanf("%f", &Quant[i].preco);
+	scanf("%f", &Quant[i].preco);getchar();
 	printf("Largura: ");
-	scanf("%f", &Quant[i].dimensoes.largura);
+	scanf("%f", &Quant[i].dimensoes.largura);getchar();
 	printf("Profundidade: ");
-	scanf("%f", &Quant[i].dimensoes.profundidade);
+	scanf("%f", &Quant[i].dimensoes.profundidade);getchar();
 	printf("Altura: ");
-	scanf("%f", &Quant[i].dimensoes.altura);
+	scanf("%f", &Quant[i].dimensoes.altura);getchar();
 	printf("Produto %d cadastrado com sucesso!\n", i+1);
 }
 
@@ -53,7 +53,7 @@ int main ()
 	while(scanf("%d", &op)!=EOF)
 	{
 		printf("Numero produto: ");
-		scanf("%d", &pro);
+		scanf("%d", &pro);getchar();
 		if(op==1)
 			cadastrar(Quant, pro-1);
 		else if(op==2)
