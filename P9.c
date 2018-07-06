@@ -1,3 +1,6 @@
+//Nome:Guilherme Felipe da Silva
+//Matricula: 11811EEL039
+
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -14,17 +17,22 @@ struct Produto{
 
 void cadastrar(struct Produto Quant[], int i)
 {
-	scanf("%s", &Quant[i].nome);
+	printf("Nome: ");
+	scanf("%s", Quant[i].nome);
+	printf("Preco: ");
 	scanf("%f", &Quant[i].preco);
+	printf("Largura: ");
 	scanf("%f", &Quant[i].dimensoes.largura);
+	printf("Profundidade: ");
 	scanf("%f", &Quant[i].dimensoes.profundidade);
+	printf("Altura: ");
 	scanf("%f", &Quant[i].dimensoes.altura);
 	printf("Produto %d cadastrado com sucesso!\n", i+1);
 }
 
 void consultar(struct Produto Quant[], int i)
 {
-
+	
 	if (strcmp (Quant[i].nome, "") != 0 && (i==0||i==1))
 		printf("%s, R$ %.2f, L: %.2fm x P: %.2fm x A: %.2fm\n", Quant[i].nome, Quant[i].preco, +
 			+ Quant[i].dimensoes.largura, Quant[i].dimensoes.profundidade, Quant[i].dimensoes.altura);
@@ -44,6 +52,7 @@ int main ()
 
 	while(scanf("%d", &op)!=EOF)
 	{
+		printf("Numero produto: ");
 		scanf("%d", &pro);
 		if(op==1)
 			cadastrar(Quant, pro-1);
@@ -56,3 +65,4 @@ int main ()
 
 	return 0;
 }
+
